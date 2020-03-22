@@ -1,16 +1,6 @@
 /***
  * Realiza el ejercicio con prompt(mensaje) y haz uso de los template strings
 
-    2 - Escribe un programa que pueda calcular el área de 3 figuras geométricas, triángulo, rectángulo y círculo. En primer lugar pregunta de qué figura se quiere calcular el área, después solicita los datos que necesites para calcularlo.
-    triángulo = b*h/2
-    rectángulo = b*h
-    triángulo = b * h/2
-    rectángulo = b * h
-    círculo = π * r2 (pi * radio al cuadrado)
-
-    3 - Solicita un número e imprime todos los números pares e impares desde 1 hasta ese número con el mensaje "es par" o "es impar"
- * 
-
  
  *  1 - Solicita un nombre, la edad y muestra por consola el mensaje "Hola ____, tienes ____ años y el año que viene tendrás ____ años" Realiza el ejercicio con prompt(mensaje) y haz uso de los template strings
 
@@ -23,6 +13,7 @@
     5 - Escriba un programa que pida un número entero mayor que cero y calcule su factorial. El factorial es el resultado de multiplicar ese número por sus anteriores hasta la unidad.
 
     !5 = 5*4*3*2*1 = 120
+    
     6 - Escribe un programa que permita ir introduciendo una serie indeterminadade números mientras su suma no supere 50. Cuando esto ocurra, se debe mostrar el total acumulado y el contador de cuantos números se han introducido
 
     7 - Crea 3 arrays. El primero tendra 5 números y el segundo se llamará pares y el tercero impares, ambos estarán vacíos. Después multiplica cada uno de los números del primer array por un número aleatorio entre 1 y 10, si el resultado es par guarda ese número en el array de pares y si es impar en el array de impares. Muestra por consola: -la multiplicación que se produce junto con su resultado con el formato 2 x 3 = 6 -el array de pares e impares
@@ -145,12 +136,104 @@
  * 
  */
 
-let num2 = parseInt(prompt('Introduce un número'));
-let result = 1;
+// let num2 = parseInt(prompt('Introduce un número'));
+// let result = 1;
 
 
-for (let i = num2; i > 0; i--){
-   result *= i;
+// for (let i = num2; i > 0; i--){
+//    result *= i;
+// }
+
+// console.log(`El factorial de ${num2} es ${result}`);
+
+
+
+/***
+ * 6 - Escribe un programa que permita ir introduciendo una serie indeterminadade números mientras su suma no supere 50. Cuando esto ocurra, se debe mostrar el total acumulado y el contador de cuantos números se han introducido
+ */
+
+//  let suma = 0;
+//  let cont = 0;
+
+//  while(suma<=50) {
+//     suma += parseInt(prompt('Ingresá un número para añadir a la suma'));
+//     cont++;
+//  }
+
+//  console.log (`El total de la suma es de: ${suma}`);
+//  console.log(`La cantidad de números ingresados es de: ${cont}`);
+
+
+/**
+ * 7 - Crea 3 arrays. El primero tendra 5 números y el segundo se llamará pares y el tercero impares, ambos estarán vacíos. Después multiplica cada uno de los números del primer array por un número aleatorio entre 1 y 10, si el resultado es par guarda ese número en el array de pares y si es impar en el array de impares. Muestra por consola: -la multiplicación que se produce junto con su resultado con el formato 2 x 3 = 6 -el array de pares e impares
+ */
+
+//  const numbers = [3,43,21,20,56];
+//  let pares =[];
+//  let impares = [];
+
+//  for(number of numbers){
+//    let random = Math.round(Math.random() * 10 + 1); //Math.random() * 10 + 1 de esta forma tenemos un número aleatorio entre uno y 10 
+//    const result = number * random;
+
+//    console.log(`${number} x ${random} = ${result}`);
+//    if (result % 2 ==0) {
+//       pares.push(result);
+//    } else {
+//       impares.push(result)
+
+//       }
+//    }
+
+
+//    console.log(pares);
+//    console.log(impares);
+
+
+/**
+ * 8 - Dado un array de letras, solicita un número de DNI y calcula que letra le corresponde. El número no puede ser negativo ni tener más de 8 dígitos. La posición de la letra es el resultado del módulo del número introducido entre 23
+
+    const letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+ */
+
+// const letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T']
+
+// const dni = prompt('Introduce tu DNI')
+
+// if (dni.length==8 && parseInt(dni)> 0 ) {
+//    console.log(`Tu DNI completo es ${dni}${letras[dni%23]}`)
+// }
+
+
+/**
+ * 9 - Solicitar al usuario una palabra y mostrar por consola el número de consonantes, vocales y longitud de la palabra.
+ */
+
+// const palabra = prompt('Introduce una palabra.').toLowerCase()
+
+// let consonantes = 0
+// let vocales = 0
+
+// for(const letra of palabra){
+//    if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') vocales++
+//    else consonantes++
+// }
+
+// console.log(`El número de consonantes es de ${consonantes}`)
+// console.log(`El número de vocales es de ${vocales}`)
+// console.log(`La longitud de la palabra es de ${palabra.length}`)
+
+
+/**
+ * 10 - Dado un array que contiene ["azul", "amarillo", "rojo", "verde", "rosa"] determinar si un color introducido por el usuario a través de un prompt se encuentra dentro del array o no. 
+ */
+
+const colors = ["azul", "amarillo", "rojo", "verde", "rosa"]
+
+const color = prompt('Introduce un color').toLowerCase()
+
+if (colors.indexOf(color) !== -1) { //-1 nos dice si encuentra el color dentro del array
+   console.log('Tu color se encuentra dentro del array');
+} else{
+   console.log('Tu color no se encuentra dentro del array');
 }
-
-console.log(`El factorial de ${num2} es ${result}`);
