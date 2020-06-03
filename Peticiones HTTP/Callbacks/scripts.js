@@ -52,10 +52,12 @@ const emails = [
 
 const getUser = (id, cb) => {
     const user = users.find(user => user.id == id)
+
     if (!user) cb(`No existe el uduario con id ${id}`)
     else cb(null, user);
     
 }
+
 
 const getEmail = (user, cb) => {
     const email = emails.find(email => email.id == user.id)
